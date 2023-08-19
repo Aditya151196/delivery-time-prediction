@@ -20,3 +20,12 @@ RAW_DATA_FILE_NAME="raw.csv"
 INGESTED_DATA_DIR_NAME="ingested_data"
 TRAIN_DATA_FILE_NAME="train.csv"
 TEST_DATA_FILE_NAME="test.csv"
+
+
+# Data transformation related variables
+DATA_TRANSFORMATION_ARTIFACT = "data_transformation"
+DATA_PREPROCESSED_DIR = "preprocessed"
+DATA_TRANSFORMATION_PREPROCESSING_OBJ = "preprocessor.pkl"
+DATA_TRANSFORMED_DIR = "transformed_data"
+TRANSFORMED_TRAIN_DIR_KEY = "train.csv"
+TRANSFORMED_TEST_DIR_KEY = "test.csv"
