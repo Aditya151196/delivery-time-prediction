@@ -29,3 +29,7 @@ DATA_TRANSFORMATION_PREPROCESSING_OBJ = "preprocessor.pkl"
 DATA_TRANSFORMED_DIR = "transformed_data"
 TRANSFORMED_TRAIN_DIR_KEY = "train.csv"
 TRANSFORMED_TEST_DIR_KEY = "test.csv"
+
+# model trainer
+MODEL_TRAINER_KEY = "model_trainer"
+MODEL_OBJECT = "model.pkl"

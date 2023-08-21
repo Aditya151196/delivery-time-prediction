@@ -8,7 +8,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation,DataTransformationConfig
-
+from src.components.model_trainer import ModelTrainer,ModelTrainerConfig
 
 @dataclass
 class DataIngestionConfig:
@@ -50,10 +50,29 @@ class DataIngestion:
             raise CustomException(e,sys)
 
 
-if __name__=="__main__":
-    obj=DataIngestion()
-    train_data,test_data=obj.initiate_data_ingestion()
+#if __name__ == "__main__":
+ #   obj = DataIngestion()
+ #   train_data, test_data = obj.iniitiate_data_ingestion()
+ #   data_transformation = DataTransformation()
+ #   train_arr, test_arr = data_transformation.inititate_data_transformation(train_data, test_data)
+
+# Data Transformation
+
+#if __name__ == "__main__":
+ #   obj = DataIngestion()
+  #  train_data_path,test_data_path=obj.iniitiate_data_ingestion()
+   # data_transformation = DataTransformation()
+    #train_arr,test_arr,_ = data_transformation.inititate_data_transformation(train_data_path,test_data_path)
+
+
+# Model Training 
+
+if __name__ == "__main__":
+    obj = DataIngestion()
+    train_data_path,test_data_path=obj.initiate_data_ingestion()
     data_transformation = DataTransformation()
-    train_arr, test_arr,_ = data_transformation.initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,_ = data_transformation.initaite_data_transformation(train_data_path,test_data_path)
+    model_trainer = ModelTrainer()
+    print(model_trainer.initate_model_training(train_arr,test_arr))
 
     
