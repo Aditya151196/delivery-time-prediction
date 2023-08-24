@@ -35,5 +35,13 @@ def evaluate_model(X_train,y_train,X_test,y_test,models):
         return report
     
     except Exception as e:
-        logging.info("Error occured in model evaluation")
+        logging.info("Exception occured in model evaluation")
+        raise CustomException(e,sys)
+    
+def load_model(file_path):
+    try:
+        with open(file_path,'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        logging.info("Exception occured while loading a model")
         raise CustomException(e,sys)
